@@ -1,4 +1,4 @@
-# fba-dummy
+# fba-dummy [![Build Status](https://travis-ci.org/yakcyll/fba-dummy.svg?branch=master)](https://travis-ci.org/yakcyll/fba-dummy)
 Automatic/scripted 2p control for fba (potentially any emulator).
 
 ## Why?
