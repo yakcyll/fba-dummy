@@ -6,13 +6,18 @@ addons:
         sources:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-            - beineri-opt-qt551
         packages:
-            - qt55base
             - clang-3.7
             - g++-5
             - gcc-5
 
+before_install:
+  - sudo add-apt-repository ppa:beineri/opt-qt551 -y
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get install -qq qt55base; source /opt/qt55/bin/qt55-env.sh
+
 script: 
-- qmake -r
-- make check
+  - qmake -r
+  - make check
