@@ -71,6 +71,7 @@ void ControlModule::createSetupPanel()
     ql.append("Inactive");
     ql.append("Block");
     ql.append("Crouch");
+    ql.append("Jump");
     ql.append("Scripted");
     ql.append("CPU");
 

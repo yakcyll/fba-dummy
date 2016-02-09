@@ -19,3 +19,8 @@ SOURCES += main.cpp\
 HEADERS  += controlmodule.h
 
 FORMS    += controlmodule.ui
+
+RESOURCES += \
+    images.qrc
+
+DISTFILES +=
