@@ -12,7 +12,7 @@ public:
     ~FBAGameInputConfigStore();
 
     void setFilePath(QString filePath);
-    bool parseInputConfig();
+    int parseInputConfig();
 
     bool setMapping(VKey p1k, VKey p2k);
     VKey operator[](const VKey p1k);

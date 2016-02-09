@@ -25,12 +25,18 @@ void FBAGameInputConfigStore::setFilePath(QString filePath)
 
 int FBAGameInputConfigStore::parseInputConfig()
 {
-
+    return 0;
 }
 
 bool FBAGameInputConfigStore::setMapping(VKey p1k, VKey p2k)
 {
-    this->playerMapping.insert(p1k, p2k);
+    if (this->playerMapping.contains(p1k)) {
+        this->playerMapping[p1k] = p2k;
+        return false;
+    } else {
+        this->playerMapping.insert(p1k, p2k);
+        return true;
+    }
 }
 
 VKey FBAGameInputConfigStore::operator[](const VKey p1k)
@@ -41,6 +47,6 @@ VKey FBAGameInputConfigStore::operator[](const VKey p1k)
 
 VKey FBAGameInputConfigStore::operator()(const VKey p2k)
 {
-    if (this->playerMapping.values.contains(p2k)) return this->playerMapping.key(p2k);
+    if (this->playerMapping.values().contains(p2k)) return this->playerMapping.key(p2k);
     else return 0x0;
 }
