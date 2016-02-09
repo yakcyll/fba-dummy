@@ -12,6 +12,8 @@ TARGET = fba-dummy
 TEMPLATE = app
 
 QMAKE_CXXFLAGS += -std=c++14
+QMAKE_CC = gcc-5
+QMAKE_CXX = g++-5
 
 SOURCES += main.cpp \
     control_module.cpp \

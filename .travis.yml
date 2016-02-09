@@ -1,12 +1,17 @@
 language: cpp
 compiler: gcc
 
-before_install:
-- sudo add-apt-repository ppa:beineri/opt-qt551 -y
-- sudo apt-get update -qq
-
-install:
-- sudo apt-get install -qq qt55base; source /opt/qt55/bin/qt55-env.sh
+addons:
+    apt:
+        sources:
+            - llvm-toolchain-precise
+            - ubuntu-toolchain-r-test
+            - ppa:beineri/opt-qt551
+        packages:
+            - qt55base
+            - clang-3.7
+            - g++-5
+            - gcc-5
 
 script: 
 - qmake -r
