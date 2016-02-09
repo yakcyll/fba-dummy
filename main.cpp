@@ -1,4 +1,4 @@
-#include "controlmodule.h"
+#include "control_module.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

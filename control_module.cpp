@@ -1,4 +1,4 @@
-#include "controlmodule.h"
+#include "control_module.h"
 #include "ui_controlmodule.h"
 
 //== Const definition

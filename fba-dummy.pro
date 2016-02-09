@@ -13,12 +13,15 @@ TEMPLATE = app
 
 QMAKE_CXXFLAGS += -std=c++14
 
-SOURCES += main.cpp\
-        controlmodule.cpp
+SOURCES += main.cpp \
+    control_module.cpp
 
-HEADERS  += controlmodule.h
+HEADERS  += \
+    fba_game_input_config_store.h \
+    control_module.h
 
-FORMS    += controlmodule.ui
+FORMS    += \
+    control_module.ui
 
 RESOURCES += \
     images.qrc
