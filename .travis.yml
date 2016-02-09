@@ -6,7 +6,7 @@ addons:
         sources:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-            - ppa:beineri/opt-qt551
+            - beineri-opt-qt551
         packages:
             - qt55base
             - clang-3.7
