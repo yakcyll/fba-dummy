@@ -68,12 +68,12 @@ void ControlModule::createSetupPanel()
     this->modeBox = new QComboBox();
 
     QStringList ql;
-    ql.append("Inactive");
-    ql.append("Block");
-    ql.append("Crouch");
-    ql.append("Jump");
-    ql.append("Scripted");
-    ql.append("CPU");
+    ql.append(CM_MODE_STAND);
+    ql.append(CM_MODE_BLOCK);
+    ql.append(CM_MODE_CROUCH);
+    ql.append(CM_MODE_JUMP);
+    ql.append(CM_MODE_SCRIPT);
+    ql.append(CM_MODE_CPU);
 
     this->modeBox->addItems(ql);
 
@@ -85,7 +85,7 @@ void ControlModule::createSetupPanel()
     inactiveBox->layout()->addWidget(testLabel);
     inactiveBox->show();
     this->activeModePanel = inactiveBox;
-    this->modePanels->insert("Inactive", inactiveBox);
+    this->modePanels->insert(CM_MODE_STAND, inactiveBox);
 
     QGroupBox* blockBox = new QGroupBox("");
     QButtonGroup* blockTypeGroup = new QButtonGroup();
@@ -102,7 +102,7 @@ void ControlModule::createSetupPanel()
     void (QButtonGroup:: *rbr)(QAbstractButton *) = &QButtonGroup::buttonReleased;
     connect(blockTypeGroup, rbp, [=](QAbstractButton *button) { if (button->isChecked()) {blockTypeGroup->setExclusive(false); button->setChecked(false); button->setEnabled(false); blockTypeGroup->setExclusive(true);}});
     connect(blockTypeGroup, rbr, [=](QAbstractButton *button) { button->setEnabled(true); });
-    this->modePanels->insert("Block", blockBox);
+    this->modePanels->insert(CM_MODE_BLOCK, blockBox);
 
     connect(this->modeBox, SIGNAL(currentIndexChanged(int)), this, SLOT(handleChangePanels(int)));
 

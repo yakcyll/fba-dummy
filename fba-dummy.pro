@@ -14,7 +14,8 @@ TEMPLATE = app
 QMAKE_CXXFLAGS += -std=c++14
 
 SOURCES += main.cpp \
-    control_module.cpp
+    control_module.cpp \
+    fba_game_input_config_store.cpp
 
 HEADERS  += \
     fba_game_input_config_store.h \

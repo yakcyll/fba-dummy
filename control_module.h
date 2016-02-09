@@ -1,6 +1,7 @@
 #ifndef CONTROLMODULE_H
 #define CONTROLMODULE_H
 
+//== Qt Includes
 #include <QDesktopWidget>
 #include <QMainWindow>
 #include <QMenuBar>
@@ -15,6 +16,16 @@
 #include <QCheckBox>
 #include <QMessageBox>
 
+//== Defines
+#define CM_MODE_STAND   "Stand"
+#define CM_MODE_BLOCK   "Block"
+#define CM_MODE_CROUCH  "Crouch"
+#define CM_MODE_JUMP    "Jump"
+#define CM_MODE_SCRIPT  "Scripted"
+#define CM_MODE_CPU     "CPU"
+
+
+//== Class declarations
 namespace Ui {
 class ControlModule;
 }

@@ -8,13 +8,15 @@ typedef unsigned char VKey;
 class FBAGameInputConfigStore {
 public:
     explicit FBAGameInputConfigStore();
+    explicit FBAGameInputConfigStore(QString filePath);
     ~FBAGameInputConfigStore();
 
-    void setFilePath(QString);
+    void setFilePath(QString filePath);
     bool parseInputConfig();
 
-    bool setMapping(VKey, VKey);
-    VKey operator[](const VKey);
+    bool setMapping(VKey p1k, VKey p2k);
+    VKey operator[](const VKey p1k);
+    VKey operator()(const VKey p2k); // this is gonna be super confusing LOL
 
 private:
     QString filePath;
