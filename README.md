@@ -7,7 +7,7 @@ Kinda disappointed with the lack of proper training mode tools for 3s on PC. Can
 
 ## How?
 
-The project is written in C++ with Qt 5.5 for GUI and utilizes raw input to intercept keys sent to the FBA window. This enables recording the dummy movement with player 1 keys and blocking (/after first hit) without messing with the emulated memory. During initial development I won't be focusing too much on enabling support for adding different emulator backends, but if there will be obvious ways to avoid using fba-specific code, I'll take them.
+The project is written in C++ with Qt 5.5 for GUI and utilizes keyboard hooks to intercept keys sent to the FBA window. This enables recording the dummy movement with player 1 keys (without having p1 move around at the same time) and blocking (/after first hit) without messing with the emulated memory. During initial development I won't be focusing too much on enabling support for adding different emulator backends, but if there will be obvious ways to avoid using fba-specific code, I'll take them.
 
 ## Can I help?
 
