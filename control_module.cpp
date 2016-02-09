@@ -1,5 +1,5 @@
 #include "control_module.h"
-#include "ui_controlmodule.h"
+#include "ui_control_module.h"
 
 //== Const definition
 unsigned short const ControlModule::controlModuleWidth = 275;
